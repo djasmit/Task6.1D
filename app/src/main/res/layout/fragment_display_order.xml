@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayOrderFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/DOFQuantTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Quantity:"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/DOFLengthTextView"
+                app:layout_constraintEnd_toEndOf="@+id/DOFTypeTextView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/DOFLengthTextView"
+                app:layout_constraintTop_toTopOf="@+id/DOFLengthTextView" />
+
+            <TextView
+                android:id="@+id/DOFLengthTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Length"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/DOFQuantTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFWidthTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFWidthValueTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/DOFWidthValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Width (m)"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/DOFWidthTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFWidthTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFWidthTextView" />
+
+            <TextView
+                android:id="@+id/DOFLengthValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Width (m)"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/DOFLengthTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFLengthTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFLengthTextView" />
+
+            <TextView
+                android:id="@+id/DOFWidthTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="Width:"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/DOFHeightTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFWeightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFWeightValueTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/DOFHeightTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Height:"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/DOFWidthTextView"
+                app:layout_constraintEnd_toEndOf="@+id/DOFTypeTextView"
+                app:layout_constraintStart_toEndOf="@+id/DOFWidthTextView"
+                app:layout_constraintTop_toTopOf="@+id/DOFWidthTextView" />
+
+            <TextView
+                android:id="@+id/DOFToTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="To: Receiver Username"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/DOFFromTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFPickupTimeTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/DOFFromTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From: Sender Username"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <TextView
+                android:id="@+id/DOFPickupTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pickup Time: Time"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/DOFFromTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFFromTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/DOFDropoffTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pickup Time: Time"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/DOFToTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFToTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Good Description"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DOFDropoffTimeTextView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/DOFWeightValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="weight (kg)"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/DOFWeightTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFWeightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFWeightTextView" />
+
+            <TextView
+                android:id="@+id/DOFTypeValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Good type"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/DOFTypeTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFTypeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFTypeTextView" />
+
+            <TextView
+                android:id="@+id/DOFHeightValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Height (m)"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/DOFHeightTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFHeightTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFHeightTextView" />
+
+            <TextView
+                android:id="@+id/DOFQuantityValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/DOFQuantTextView"
+                app:layout_constraintStart_toStartOf="@+id/DOFQuantTextView"
+                app:layout_constraintTop_toBottomOf="@+id/DOFQuantTextView" />
+
+            <TextView
+                android:id="@+id/DOFTypeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Type:"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/DOFWeightTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/DOFWeightTextView"
+                app:layout_constraintTop_toTopOf="@+id/DOFWeightTextView" />
+
+            <TextView
+                android:id="@+id/DOFWeightTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Weight:"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/DOFTypeTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/DOFCallDriverButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Call Driver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DOFLengthValueTextView"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
